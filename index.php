@@ -2,7 +2,12 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head>
+
+<?php include "fonctions.php";
+bootsrap("Site SAE23");?>
+
+<script src="../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +23,7 @@
     
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
     <style>
       .bd-placeholder-img {
