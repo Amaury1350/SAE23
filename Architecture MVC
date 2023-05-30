@@ -1,0 +1,4 @@
+vues :  Appel des fonctions du modèle qui ont été instancier via le controleur
+controleur : 
+modèle : dossier contenant le header et le footer
+index.php : renvoie vers le dossier le controleur
