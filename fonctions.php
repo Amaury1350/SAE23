@@ -78,7 +78,7 @@
       //code html navbar
       echo '<div class="navbar-nav shadow">
       <nav style="background-color:#A9927D;" class="navbar navbar-expand-sm ">
-        <a class="navbar-brand"><img style="width:40px;" src="'.$t2.'"></a>
+        <a class="navbar-brand"><img class="ms-2" style="width:40px;" src="'.$t2.'"></a>
         <ul class="navbar-nav">
           <li class="nav-item '.$x.'">
             <a style="'.$xx.'><strong>Accueil</strong></a>
