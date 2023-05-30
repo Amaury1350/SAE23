@@ -7,7 +7,7 @@
 </head>
 <body>
   <div class="principal">
-    <?php nav("logo3.png",2); ?>
+    <?php nav("image/logo3.png",2); ?>
     <div class="container mt-4">
       <p>test</p>
     </div>

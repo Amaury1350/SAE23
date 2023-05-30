@@ -87,12 +87,12 @@
 
 
 <div class="principal">
-    <?php nav("logo3.png",1); ?>
+    <?php nav("image/logo3.png",1); ?>
     
       <main>
 
         <div class="px-4 py-5 my-10 text-center">
-          <img class="d-block mx-auto mb-4 " src="logo3.png" alt="" width="350px;">
+          <img class="d-block mx-auto mb-4 " src="image/logo3.png" alt="" width="350px;">
           <h1 class="display-5 fw-bold text-body-emphasis">Bienvenue chez Cloud Info ! </h1><br>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Transformez votre entreprise grâce à l'innovation technologique.<br>Chez Cloud Info, nous sommes passionnés par l'informatique et les opportunités qu'elle offre pour révolutionner votre entreprise. Nous sommes un leader mondial des solutions technologiques, offrant des services de développement de logiciels, d'intégration de systèmes et de sécurité informatique avancée. Avec une expertise solide et une vision axée sur l'avenir, nous sommes là pour vous accompagner dans votre transformation digitale.</p>
@@ -111,7 +111,7 @@
           </div>
           <div class="overflow-hidden" style="max-height: 30vh;">
             <div class="container px-5">
-              <img src="cloud.jpg" class="d-block mx-lg-auto img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"  loading="lazy">
+              <img src="image/cloud.jpg" class="d-block mx-lg-auto img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"  loading="lazy">
             </div>
           </div>
         </div>
@@ -121,7 +121,7 @@
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
-              <img src="Partenariat.jpg" class="d-block mx-lg-auto img-fluid rounded-3 shadow" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              <img src="image/Partenariat.jpg" class="d-block mx-lg-auto img-fluid rounded-3 shadow" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
               <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Partenariat stratégique</h1>
@@ -142,7 +142,7 @@
               <p class="lead">Avec notre présence internationale, nous avons la capacité de fournir des solutions technologiques de pointe dans le monde entier. Nos équipes basées dans différents hubs technologiques travaillent ensemble pour apporter des compétences locales et une perspective globale à chaque projet.</p>
             </div>
             <div class="col-10 col-sm-8 col-lg-6">
-              <img src="commerce.jpg" class="d-block mx-lg-auto img-fluid rounded-3 shadow" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              <img src="image/commerce.jpg" class="d-block mx-lg-auto img-fluid rounded-3 shadow" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
           </div>
         </div>

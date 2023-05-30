@@ -15,7 +15,7 @@
 }
   </style>
   <div class="principal">
-    <?php nav("logo3.png",3); ?>
+    <?php nav("image/logo3.png",3); ?>
     <div class="container mt-4">
       <h2><strong>Qui sommes-nous</strong></h2>
       <p class="text-justify"><br>
@@ -29,7 +29,7 @@
         répondent à leurs objectifs commerciaux.
       </p><br>
       <div class="d-flex align-items-center justify-content-center">
-        <img class="img-fluid ow g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" width="55%" height="55%" src="bureau.jpg">
+        <img class="img-fluid ow g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" width="55%" height="55%" src="image/bureau.jpg">
       </div>
       <br>
       <p class="text-justify">
