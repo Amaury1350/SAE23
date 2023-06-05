@@ -206,33 +206,33 @@ $naa.$nbb.$ncc.$ndd.$nee=" text-white";
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="index.php" class="nav-link '.$na.'" '.$naa.' style="color:#a9927d">
+        <a href="Accueil.php" class="nav-link '.$na.'" '.$naa.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
           Accueil
         </a>
       </li>
       <li>
-        <a href="annuaire.php" class="nav-link '.$nb.'"'.$nbb.' style="color:#a9927d">
+        <a href="Gestion_Fichiers.php" class="nav-link '.$nb.'"'.$nbb.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          Annuaire employée
+          Gestion fichiers
         </a>
       </li>
       <li>
-        <a href="Partenaires.php" class="nav-link '.$nc.'"'.$ncc.' style="color:#a9927d">
+        <a href="Gestion_partenaires.php" class="nav-link '.$nc.'"'.$ncc.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Partenaire
+          Gestion partenaires
         </a>
       </li>
       <li>
-        <a href="QSN.php" class="nav-link '.$nd.'"'.$ndd.' style="color:#a9927d">
+        <a href="Gestion_user.php" class="nav-link '.$nd.'"'.$ndd.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          QSN
+          Gestion utilisateur
         </a>
       </li>
       <li>
-        <a href="Activité.php" class="nav-link '.$ne.'"'.$nee.' style="color:#a9927d">
+        <a href="Wiki.php" class="nav-link '.$ne.'"'.$nee.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
-          Activité
+          Wiki
         </a>
       </li>
     </ul>

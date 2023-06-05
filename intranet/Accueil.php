@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php navbar(2) ?>
+<?php navbar(1) ?>
 
 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus numquam esse vel reprehenderit omnis labore mollitia, culpa dignissimos aliquam. Blanditiis obcaecati ipsum iure temporibus consequuntur mollitia sequi praesentium architecto?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aliquid? Ab aspernatur dignissimos aliquid in laborum et labore nisi quaerat, neque distinctio iste voluptates optio rerum eius tempore? Reprehenderit, blanditiis.
