@@ -168,8 +168,8 @@
 ///Nav bar pour l'intranet
 
 function navbar($np1){
-  $na="";$nb="";$nc="";$nd="";$ne="";
-  $naa=" color:#b8b8b8";$nbb=" color:#b8b8b8";$ncc=" color:#b8b8b8";$ndd=" color:#b8b8b8";$nee=" color:#b8b8b8";
+  $na="";$nb="";$nc="";$nd="";$ne="";$nf="";
+  $naa=" color:#b8b8b8";$nbb=" color:#b8b8b8";$ncc=" color:#b8b8b8";$ndd=" color:#b8b8b8";$nee=" color:#b8b8b8";$nff=" color:#b8b8b8";
 
 ///condition pour definir la page actives
 if ($np1==1){
@@ -192,9 +192,13 @@ elseif($np1==5){
   $ne=" active";
   $nee=" style='background-color:#a9927d;'";
   }
+elseif($np1==6){
+  $nf=" active";
+  $nff=" style='background-color:#a9927d;'";
+  }
 else{
-$na.$nb.$nc.$nd.$ne="";
-$naa.$nbb.$ncc.$ndd.$nee=" text-white";
+$na.$nb.$nc.$nd.$ne.$nf="";
+$naa.$nbb.$ncc.$ndd.$nee.$nff=" text-white";
 }
 
 ///code html de la navbar
@@ -233,6 +237,12 @@ $naa.$nbb.$ncc.$ndd.$nee=" text-white";
         <a href="Wiki.php" class="nav-link '.$ne.'"'.$nee.' style="color:#a9927d">
           <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
           Wiki
+        </a>
+      </li>
+      <li>
+        <a href="annuaire.php" class="nav-link '.$nf.'"'.$nff.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
+          Annuaire
         </a>
       </li>
     </ul>
