@@ -78,7 +78,7 @@
       //code html navbar
       echo '<div class="navbar-nav shadow">
       <nav style="background-color:#A9927D;" class="navbar navbar-expand-sm ">
-        <a class="navbar-brand"><img style="width:40px;" src="'.$t2.'"></a>
+        <a class="navbar-brand"><img class="ms-2" style="width:40px;" src="'.$t2.'"></a>
         <ul class="navbar-nav">
           <li class="nav-item '.$x.'">
             <a style="'.$xx.'><strong>Accueil</strong></a>
@@ -162,3 +162,94 @@
         </footer>';*/
     }
 ?>
+
+
+<?php
+///Nav bar pour l'intranet
+
+function navbar($np1){
+  $na="";$nb="";$nc="";$nd="";$ne="";
+  $naa=" color:#b8b8b8";$nbb=" color:#b8b8b8";$ncc=" color:#b8b8b8";$ndd=" color:#b8b8b8";$nee=" color:#b8b8b8";
+
+///condition pour definir la page actives
+if ($np1==1){
+$na=" active";
+$naa=" style='background-color:#a9927d;'";
+}
+elseif($np1==2){
+$nb=" active";
+$nbb=" style='background-color:#a9927d;'";
+}
+elseif($np1==3){
+$nc=" active";
+$ncc=" style='background-color:#a9927d;'";
+}
+elseif($np1==4){
+$nd=" active";
+$ndd=" style='background-color:#a9927d;'";
+}
+elseif($np1==5){
+  $ne=" active";
+  $nee=" style='background-color:#a9927d;'";
+  }
+else{
+$na.$nb.$nc.$nd.$ne="";
+$naa.$nbb.$ncc.$ndd.$nee=" text-white";
+}
+
+///code html de la navbar
+    echo '<div class="d-flex flex-column flex-shrink-0 p-3" style="background-color : #22333b; heigth: 100px ; width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">SAE23</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="index.php" class="nav-link '.$na.'" '.$naa.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="annuaire.php" class="nav-link '.$nb.'"'.$nbb.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          Annuaire employée
+        </a>
+      </li>
+      <li>
+        <a href="Partenaires.php" class="nav-link '.$nc.'"'.$ncc.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+          Partenaire
+        </a>
+      </li>
+      <li>
+        <a href="QSN.php" class="nav-link '.$nd.'"'.$ndd.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          QSN
+        </a>
+      </li>
+      <li>
+        <a href="Activité.php" class="nav-link '.$ne.'"'.$nee.' style="color:#a9927d">
+          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
+          Activité
+        </a>
+      </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong>mdo</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+</div>
+';
+}
