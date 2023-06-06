@@ -25,11 +25,25 @@
 
     .file-list li {
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
     }
 
     .file-list li span {
       font-weight: bold;
       margin-right: 10px;
+    }
+
+    .file-list li a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .upload-button {
+      display: block;
+      margin: 20px auto;
+      max-width: 200px;
     }
   </style>
 </head>
@@ -43,10 +57,13 @@
     <em>(ou cliquez pour sélectionner les fichiers)</em>
   </div>
   <ul class="file-list" id="fileList"></ul>
+  <button class="upload-button" id="uploadButton" disabled>Envoyer les fichiers</button>
 
   <script>
     var dropZone = document.getElementById('dropZone');
     var fileList = document.getElementById('fileList');
+    var uploadButton = document.getElementById('uploadButton');
+    var filesArray = [];
 
     dropZone.addEventListener('dragover', function(e) {
       e.preventDefault();
@@ -76,18 +93,11 @@
       fileInput.click();
     });
 
-    function handleFiles(files) {
-      for (var i = 0; i < files.length; i++) {
-        var file = files[i];
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<span>' + file.name + '</span>' + (file.size / 1024).toFixed(2) + ' KB';
-        fileList.appendChild(listItem);
-      }
-
+    uploadButton.addEventListener('click', function() {
       var formData = new FormData();
-      for (var i = 0; i < files.length; i++) {
-        formData.append('files[]', files[i]);
-      }
+      filesArray.forEach(function(file) {
+        formData.append('files[]', file);
+      });
 
       var xhr = new XMLHttpRequest();
       xhr.open('POST', 'upload.php', true);
@@ -96,9 +106,33 @@
         console.log(this.responseText);
       };
       xhr.send(formData);
+    });
+
+    function handleFiles(files) {
+      for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+        var listItem = document.createElement('li');
+        listItem.innerHTML = '<span>' + file.name + '</span>' + (file.size / 1024).toFixed(2) + ' KB';
+        var link = document.createElement('a');
+        link.href = URL.createObjectURL(file);
+        link.download = file.name;
+        link.innerHTML = 'Télécharger';
+        listItem.appendChild(link);
+        fileList.appendChild(listItem);
+        filesArray.push(file);
+      }
+
+      if (filesArray.length > 0) {
+        uploadButton.disabled = false;
+      }
     }
   </script>
+  
+  <div class="d-flex justify-content-center align-items-center">
+    <a href="view_files.php" class="btn btn-warning">Cliquez ici pour accéder à vos fichiers</a>
+  </div>
 
+  
   
 
 
