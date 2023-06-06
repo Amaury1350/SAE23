@@ -9,10 +9,13 @@
 
 <?php navbar(1) ?>
 
-<p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores necessitatibus numquam esse vel reprehenderit omnis labore mollitia, culpa dignissimos aliquam. Blanditiis obcaecati ipsum iure temporibus consequuntur mollitia sequi praesentium architecto?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, aliquid? Ab aspernatur dignissimos aliquid in laborum et labore nisi quaerat, neque distinctio iste voluptates optio rerum eius tempore? Reprehenderit, blanditiis.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam natus molestias esse iste, porro asperiores, quos architecto nemo delectus itaque inventore aspernatur tenetur maiores, temporibus sequi eius recusandae velit praesentium!
-</p>
+<div class="px-4 py-5 my-10 text-center">
+  <img class="d-block mx-auto mb-4 " src="../image/logo3.png" alt="" width="350px;">
+    <h1 class="display-5 fw-bold text-body-emphasis">Bienvenue sur l'intranet Cloud Info ! </h1><br>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Voici votre espace personnel</p>
+      </div>
+</div>
 
 </body>
 </html>
