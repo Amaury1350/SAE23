@@ -76,7 +76,7 @@
           $xx.$yy.$ww.$zz.$vv=" color:#b8b8b8";
       }
       //code html navbar
-      echo '<div class="navbar-nav shadow">
+      echo '<div class="navbar-nav shadow-lg">
       <nav style="background-color:#A9927D;" class="navbar navbar-expand-sm ">
         <a class="navbar-brand"><img class="ms-2" style="width:40px;" src="'.$t2.'"></a>
         <ul class="navbar-nav">
@@ -202,64 +202,49 @@ $naa.$nbb.$ncc.$ndd.$nee.$nff=" text-white";
 }
 
 ///code html de la navbar
-    echo '<div class="d-flex flex-column flex-shrink-0 p-3" style="background-color : #22333b; heigth: 100px ; width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">SAE23</span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li class="nav-item">
-        <a href="Accueil.php" class="nav-link '.$na.'" '.$naa.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-          Accueil
-        </a>
-      </li>
-      <li>
-        <a href="Gestion_Fichiers.php" class="nav-link '.$nb.'"'.$nbb.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          Gestion fichiers
-        </a>
-      </li>
-      <li>
-        <a href="Gestion_partenaires.php" class="nav-link '.$nc.'"'.$ncc.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Gestion partenaires
-        </a>
-      </li>
-      <li>
-        <a href="Gestion_user.php" class="nav-link '.$nd.'"'.$ndd.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          Gestion utilisateur
-        </a>
-      </li>
-      <li>
-        <a href="Wiki.php" class="nav-link '.$ne.'"'.$nee.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
-          Wiki
-        </a>
-      </li>
-      <li>
-        <a href="annuaire.php" class="nav-link '.$nf.'"'.$nff.' style="color:#a9927d">
-          <svg class="bi pe-none me-2" width="16" height="16"><use xlinkh:ref="#people-circle"></use></svg>
-          Annuaire
-        </a>
-      </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>mdo</strong>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
+echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$na.'" '.$naa.' href="Accueil.php">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$nb.'" '.$nbb.' href="Gestion_Fichiers.php">Gestion fichiers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$nc.'" '.$ncc.' href="Gestion_partenaires.php">Gestion partenaires</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$nd.'" '.$ndd.' href="Gestion_user.php">Gestion utilisateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$ne.'" '.$nee.' href="Wiki.php">Wiki</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded shadow-lg '.$nf.'" '.$nff.' href="annuaire.php">Annuaire</a>
+        </li>
       </ul>
+      <div class="navbar-nav ms-auto"> <!-- Utilisation de la classe navbar-nav et ms-auto -->
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../image/homme.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">Nouveau projet...</a></li>
+            <li><a class="dropdown-item" href="#">Paramètres</a></li>
+            <li><a class="dropdown-item" href="#">Profil</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
-';
+  </div>
+</nav>';
 }
+?>
