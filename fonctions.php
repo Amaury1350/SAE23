@@ -302,5 +302,4 @@ function table_info_part($partenaire2) {
   echo '</table>';
 }
 
-
 ?>
