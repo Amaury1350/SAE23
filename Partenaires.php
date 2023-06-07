@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 <head>
-  <?php include "fonctions.php";include "intranet/Gestion_partenaires.php";
+  <?php include "fonctions.php";
   bootstrap("Site SAE23");
   
   
@@ -15,11 +15,14 @@
     <?php nav("image/logo3.png",5); ?>
     <div class="container mt-4">
       <?php 
-    $partenaires_json = $_COOKIE['partenaires'];
-    $partenaires = json_decode($partenaires_json, true);
-  
-    afficherPartenaires($partenaires);
-    ?>
+        // récupération du fichier contenant les partenaires
+        $file_path = 'intranet/partenaires.json';
+        $partenaires_json = file_get_contents($file_path);
+        // Décodage du JSON
+        $partenaires = json_decode($partenaires_json, true);
+        //return var_dump($partenaires);
+        afficherPartenaires($partenaires);
+      ?>
     </div>
   </div>
 
