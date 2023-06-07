@@ -32,6 +32,18 @@ $partenaires = array(
   
 );
 
+// Encodage de la variable des partenaires en JSON
+$partenaires_json = json_encode($partenaires);
+// Écriture du contenu dans le fichier JSON
+/*if file_exists("partenaires.json"){
+  echo "<p>test</p>";
+};*/
+$file_path = 'partenaires.json';
+file_put_contents($file_path, $partenaires_json);
+
+
+
+
 // Fonction de test
 function partenaires($partenaire1) {
 
@@ -41,16 +53,6 @@ function partenaires($partenaire1) {
       echo '<p>' . $partenaire['description'] . '</p>';
     }
 }
-
-// Encodage de la variable des partenaires en JSON
-$partenaires_json = json_encode($partenaires);
-
-// Stockage de la variable des partenaires dans un cookie
-setcookie('partenaires', $partenaires_json, time() + 3600); // Le cookie expire après 1 heure
-
-// Redirection vers la troisième page
-header("Location: Partenaires.php");
-
 
 
 ?>

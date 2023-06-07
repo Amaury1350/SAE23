@@ -53,30 +53,30 @@
 
       if ($p1==1){
           $x=" active";
-          $xx='color:#ffffff" class="nav-link" href="#"';
+          $xx='background-color:#22333b; color:#eeeeee;" class="nav-link rounded shadow-lg" href="#"';
       }
       elseif($p1==2){
           $y=" active";
-          $yy='color:#ffffff" class="nav-link" href="#"';
+          $yy='background-color:#22333b; color:#eeeeee;" class="nav-link rounded shadow-lg" href="#"';
       }
       elseif($p1==3){
           $z=" active";
-          $zz='color:#ffffff" class="nav-link" href="#"';
+          $zz='background-color:#22333b; color:#eeeeee;" class="nav-link rounded shadow-lg" href="#"';
       }
       elseif($p1==4){
           $w=" active";
-          $ww='color:#ffffff" class="nav-link" href="#"';
+          $ww='background-color:#22333b; color:#eeeeee;" class="nav-link rounded shadow-lg" href="#"';
       }
       elseif($p1==5){
         $v=" active";
-        $vv='color:#ffffff" class="nav-link" href="#"';
+        $vv='background-color:#22333b; color:#eeeeee;" class="nav-link rounded shadow-lg" href="#"';
     }
       else{
           $x.$y.$z.$w.$v="";
           $xx.$yy.$ww.$zz.$vv=" color:#b8b8b8";
       }
       //code html navbar
-      echo '<div class="navbar-nav shadow-lg">
+      echo '<div class="navbar-nav shadow">
       <nav style="background-color:#A9927D;" class="navbar navbar-expand-sm ">
         <a class="navbar-brand"><img class="ms-2" style="width:40px;" src="'.$t2.'"></a>
         <ul class="navbar-nav">
@@ -301,16 +301,5 @@ function table_info_part($partenaire2) {
   echo '</tbody>';
   echo '</table>';
 }
-
-
-// Fonction pour les identifiants
-function createID($prenom, $nom) {
-$prenom = strtolower($prenom); // Convertir le prénom en minuscules 
-$nom = strtolower($nom); // Convertir le nom en minuscules
-$prenomInitial = substr($prenom, 0, 1); // Extraire la première lettre du prénom
-$identifiant = $prenomInitial.$nom; // Concaténer la première lettre du prénom avec le nom  
-return $identifiant;
-}
-
 
 ?>
