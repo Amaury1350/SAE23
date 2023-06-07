@@ -54,7 +54,7 @@ $annuaire = array(
 
 // Affichage du tableau
 echo "<table class='table table-dark table-hover'>";
-echo "<tr><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th><th>Nombre d'employés</th></tr>";
+echo "<tr><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th></tr>";
 
 foreach ($annuaire as $employe) {
     echo "<tr>";
