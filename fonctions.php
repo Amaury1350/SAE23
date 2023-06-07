@@ -279,7 +279,7 @@ function createID($prenom, $nom) {
 
 // fonction tableau partenaires intranet
 function table_info_part($partenaire2) {
-  echo '<table class="table table-striped table-hover">';
+  echo '<table class="table table-striped table-bordered table-hover">';
   echo '<thead>';
   echo '<tr>';
   echo '<th>Logo</th>';

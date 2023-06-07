@@ -50,12 +50,25 @@ function partenaires($partenaire1) {
       echo '<h3>' . $partenaire1['nom'] . '</h3>';
       echo '<p>' . $partenaire['description'] . '</p>';
     }
+    $userGroup = 'Administrateur'; // Remplacez par le groupe d'utilisateurs approprié
+        if ($userGroup == 'Administrateur') {
+            echo '<td>' . $partenaire['infos_privees'] . '</td>';
+        } else {
+            echo '<td>Non autorisé</td>';
+        }
 }
 
 
 ?>
 
-<div class="container">
+<div class="container mt-4">
+        <div class="pt-5 my-2 text-center">
+            <h1 style="color:22333b;" class="display-4 fw-bold text-body-emphasis mx-4">Liste de nos partenaires</h1>
+            <div class="col-lg-6 mx-auto">
+                <h4 class="lead mb-4">Voici la liste des partenaires</h4>
+                <br>
+            </div>
+        </div>
     <?php   
     echo '<div>'.table_info_part($partenaires).'</div>';
 
