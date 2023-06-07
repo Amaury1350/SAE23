@@ -268,6 +268,14 @@ function afficherPartenaires($partenaire3)
   echo '</div>';
 }
 
+// Fonction pour les identifiants
+function createID($prenom, $nom) {
+  $prenom = strtolower($prenom); // Convertir le prénom en minuscules 
+  $nom = strtolower($nom); // Convertir le nom en minuscules
+  $prenomInitial = substr($prenom, 0, 1); // Extraire la première lettre du prénom
+  $identifiant = $prenomInitial.$nom; // Concaténer la première lettre du prénom avec le nom  
+  return $identifiant;
+  }
 
 // fonction tableau partenaires intranet
 function table_info_part($partenaire2) {
