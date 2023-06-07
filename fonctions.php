@@ -247,4 +247,60 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
   </div>
 </nav>';
 }
+
+// fonction cards partenaires
+function afficherPartenaires($partenaire3)
+{ echo '<div class="album py-5 bg-body-tertiary">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">';
+
+    foreach ($partenaire3 as $partenaire) {
+        echo '<div class="col">
+                  <div class="card shadow-sm">';
+        echo '<img src="' . $partenaire['logo'] . '" class="card-img-top" width="20%" alt="' . $partenaire['nom'] . '">';
+        echo '<div class="card-body">';
+        echo '<h5 class="card-title">' . $partenaire['nom'] . '</h5>';
+        echo '<p class="card-text">' . $partenaire['description'] . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        
+    }
+  echo '</div>';
+}
+
+
+// fonction tableau partenaires intranet
+function table_info_part($partenaire2) {
+  echo '<table class="table table-striped table-hover">';
+  echo '<thead>';
+  echo '<tr>';
+  echo '<th>Logo</th>';
+  echo '<th>Nom</th>';
+  echo '<th>Description</th>';
+  echo '<th>Informations privées</th>';
+  echo '</tr>';
+  echo '</thead>';
+  echo '<tbody>';
+
+  foreach ($partenaire2 as $partenaire) {
+      echo '<tr>';
+      echo '<td><img src="' . $partenaire['logo'] . '" alt="' . $partenaire['nom'] . '" width="50"></td>';
+      echo '<td>' . $partenaire['nom'] . '</td>';
+      echo '<td>' . $partenaire['description'] . '</td>';
+/*
+      // Vérification de l'autorisation d'accès aux informations privées
+      $userGroup = 'groupe1'; // Remplacez par le groupe d'utilisateurs approprié
+      if ($userGroup == 'groupe1') {
+          echo '<td>' . $partenaire['infos_privees'] . '</td>';
+      } else {
+          echo '<td>Non autorisé</td>';
+      }
+
+      echo '</tr>';*/
+  }
+  echo '</tbody>';
+  echo '</table>';
+}
+
+
 ?>
