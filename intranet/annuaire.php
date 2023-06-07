@@ -15,7 +15,7 @@
 <?php
 
 // Données de l'annuaire
-include "fonctions1.php";
+include "fonctions.php";
 
 // Données de l/'annuaire
 $annuaire = array(
@@ -70,34 +70,7 @@ foreach ($annuaire as $employe) {
 
 echo "</table>";
 
-
-
 ?>
-</body>
-</html>
 
-// nbremployes($annuaire);
-// Affichage du tableau
-echo "<table class='table table-dark table-hover'>";
-echo "<tr><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th><th>Nombre d'employés</th></tr>";
-
-foreach ($annuaire as $employe) {
-    echo "<tr>";
-    echo "<td>".$employe[0]."</td>";
-    echo "<td>".$employe[1]."</td>";
-    echo "<td>".$employe[2]."</td>";
-    echo "<td>".$employe[3]."</td>";
-    echo "<td>".$employe[4]."</td>";
-    //echo "<td>".$employe[5]."</td>";
-    
-
-    echo "</tr>";
-}
-
-echo "</table>";
-
-
-
-?>
 </body>
 </html>
