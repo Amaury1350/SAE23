@@ -48,7 +48,7 @@
       $x="";$y="";$z="";$w="";$v="";
       $xx=' color:#5E503F" class="nav-link" href="index.php"';$yy=' color:#5E503F" class="nav-link" href="Activité.php"';$ww=' color:#5E503F" class="nav-link" href="Histoire.php"';$zz=' color:#5E503F" class="nav-link" href="QSN.php"';$vv=' color:#5E503F " class="nav-link" href="Partenaires.php"';
       //code du bouton
-      $loginButton = '<a style="color: #f7f7f7; background-color:#5E503F;" class="ms-auto me-4 btn " href="#">Se connecter</a>';
+      $loginButton = '<a style="color: #f7f7f7; background-color:#5E503F;" class="ms-auto me-4 btn " href="page_sign_in.php">Se connecter</a>';
       //algorithme pour definir la page active
 
       if ($p1==1){
