@@ -51,14 +51,21 @@
 
 <?php navbar(2) ?>
 
-<h2>Gestionnaire de fichiers</h2>
+<div class="container mt-4">
+        <div class="pt-5 my-2 text-center">
+            <h1 style="color:22333b;" class="display-4 fw-bold text-body-emphasis mx-4">Gestionnaire de fichiers</h1>
+            <div class="col-lg-6 mx-auto">
+                <h4 class="lead mb-4">Voici la liste des partenaires</h4>
+                <br>
+            </div>
+        </div>
+
   <div class="drop-zone" id="dropZone">
-    Déplacez vos fichiers ici<br>
-    <em>(ou cliquez pour sélectionner les fichiers)</em>
+    <p class="text-secondary">Déplacez vos fichiers ici</p>
+    <em class="text-secondary">(ou cliquez pour sélectionner les fichiers)</em>
   </div>
   <ul class="file-list" id="fileList"></ul>
-  <button class="upload-button" id="uploadButton" disabled>Envoyer les fichiers</button>
-
+  <button class="upload-button rounded" id="uploadButton" disabled>Envoyer les fichiers</button>
   <script>
     var dropZone = document.getElementById('dropZone');
     var fileList = document.getElementById('fileList');
@@ -131,7 +138,7 @@
   <div class="d-flex justify-content-center align-items-center">
     <a href="view_files.php" class="btn btn-warning">Cliquez ici pour accéder à vos fichiers</a>
   </div>
-
+</div>
   
   
 
