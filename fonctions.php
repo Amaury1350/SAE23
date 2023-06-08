@@ -169,7 +169,7 @@
 
 function navbar($np1){
   $na="";$nb="";$nc="";$nd="";$ne="";$nf="";
-  $naa=" color:#b8b8b8";$nbb=" color:#b8b8b8";$ncc=" color:#b8b8b8";$ndd=" color:#b8b8b8";$nee=" color:#b8b8b8";$nff=" color:#b8b8b8";
+  $naa=" style='color:#eeeeee'";$nbb=" style='color:#eeeeee'";$ncc=" style='color:#eeeeee'";$ndd=" style='color:#eeeeee'";$nee=" style='color:#eeeeee'";$nff=" style='color:#eeeeee'";
 
 ///condition pour definir la page actives
 if ($np1==1){
@@ -198,11 +198,11 @@ elseif($np1==6){
   }
 else{
 $na.$nb.$nc.$nd.$ne.$nf="";
-$naa.$nbb.$ncc.$ndd.$nee.$nff=" text-white";
+$naa.$nbb.$ncc.$ndd.$nee.$nff=" style='color#eeeeee;'";
 }
 
 ///code html de la navbar
-echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
+echo '<nav class="navbar navbar-expand-lg shadow-lg" style="background-color:#22333b;">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -210,22 +210,22 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$na.'" '.$naa.' href="Accueil.php">Accueil</a>
+          <a class="nav-link rounded shadow-lg '.$na.'" '.$naa.' href="Accueil.php"><b>Accueil</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$nb.'" '.$nbb.' href="Gestion_Fichiers.php">Gestion fichiers</a>
+          <a class="nav-link rounded shadow-lg '.$nb.'" '.$nbb.' href="Gestion_Fichiers.php"><b>Gestion fichiers</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$nc.'" '.$ncc.' href="Gestion_partenaires.php">Gestion partenaires</a>
+          <a class="nav-link rounded shadow-lg '.$nc.'" '.$ncc.' href="Gestion_partenaires.php"><b>Gestion partenaires</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$nd.'" '.$ndd.' href="Gestion_user.php">Gestion utilisateur</a>
+          <a class="nav-link rounded shadow-lg '.$nd.'" '.$ndd.' href="Gestion_user.php"><b>Gestion utilisateur</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$ne.'" '.$nee.' href="Wiki.php">Wiki</a>
+          <a class="nav-link rounded shadow-lg '.$ne.'" '.$nee.' href="Wiki.php"><b>Wiki</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link rounded shadow-lg '.$nf.'" '.$nff.' href="annuaire.php">Annuaire</a>
+          <a class="nav-link rounded shadow-lg '.$nf.'" '.$nff.' href="annuaire.php"><b>Annuaire</b></a>
         </li>
       </ul>
       <div class="navbar-nav ms-auto"> <!-- Utilisation de la classe navbar-nav et ms-auto -->
@@ -239,7 +239,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
             <li><a class="dropdown-item" href="#">Paramètres</a></li>
             <li><a class="dropdown-item" href="#">Profil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+            <li><a class="dropdown-item" href="../index.php">Déconnexion</a></li>
           </ul>
         </div>
       </div>
