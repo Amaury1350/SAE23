@@ -4,34 +4,45 @@
 <html lang="fr">
 <body>
 <?php
-$json=json_decode($annuaire);
-$annuaire=$_SESSION['id'];
-$MotDePasse="bonjour";
-$MotDePasse_saisie=$_POST['motdepasse'];
-if ($MotDePasse_saisie ==$MotDePasse){
-    echo 'Authentification réussie'
-    
-} else {
-    echo 'mot de passe incorrect'
-}
+$file_path = 'annuaire.json';
+$json_data = file_get_contents($file_path);
+$data = json_decode($json_data, true);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // var_dump($_POST);
-    $_SESSION['prenom'] = $_POST['utilisateur'];
+    $utilisateur_saisi = $_POST['utilisateur'];
+    $motdepasse_saisi = $_POST['motdepasse'];
+
+    // Vérifier l'authentification de l'utilisateur
+    if (array_key_exists($utilisateur_saisi, $data)){
+        $identifiant = $data[$utilisateur_saisi]['identifiant'];
+        echo $utilisateur_saisi;
+        echo 'Utilisateur trouvé';
+    } else {
+        echo 'Utilisateur introuvable';
+    }
+    // Vérifier le mot de passe
+    if ($motdepasse_saisi == 'bonjour'){
+        $_SESSION['prenom'] = $_POST['utilisateur'];
+        echo 'Authentification réussie';
+        header("Location: Accueil.php");
+        exit();
+        echo ('Utilisateur: '.$_SESSION['prenom'].'<hr>');
+    } else {
+        // Authentification échouée
+        echo 'Mot de passe incorrect';
+    }
 
 
-    // var_dump($_SESSION);
-    echo ('Utilisateur: '.$_SESSION['prenom'].'<hr>');
+}
 
-    // echo $_POST['utilisateur'];
-
-    // echo '<br>';
-    // echo $_POST['motdepasse'];
-    
-    echo("Accèder à l'accueil : ");
-     echo('<a href="intranet/Accueil.php">Accueil</a>');
-      }
-
+// Vérifier si un utilisateur est connecté
+if (isset($_SESSION['prenom'])){
+    echo 'Utilisateur connecté: ' . $_SESSION['prenom'];
+} else {
+    echo 'Utilisateur non connecté';
+}
 ?>
 </body>
-
 </html>
+
+
