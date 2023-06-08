@@ -35,14 +35,28 @@ $partenaires = array(
 
   
 );
+
+
 $file_path = 'partenaires.json';
-// Encodage de la variable des partenaires en JSON
-$partenaires_json = json_encode($partenaires);
-// Écriture du contenu dans le fichier JSON
-
-file_put_contents($file_path, $partenaires_json);
+//récupération du json
+$partenaires_json = file_get_contents($file_path);
 
 
+
+
+
+if ($partenaires==json_decode($partenaires_json, true)){
+    $modif=false;
+    // Encodage de la variable des partenaires en JSON
+    $partenaires_json = json_encode($partenaires);
+    // Écriture du contenu dans le fichier JSON
+    file_put_contents($file_path, $partenaires_json);
+}
+else {
+    $modif==true;
+    $partenaires = json_decode($partenaires_json, true);
+    
+}
 
 
 // Fonction de test
@@ -80,21 +94,26 @@ function partenaires($partenaire1) {
     <?php   
     if (isset($_POST['id'])) {
         $id = $_POST['id'];
-    
+        $modif=true;
         // Recherche de l'index du partenaire correspondant à l'ID
         $index = array_search($id, array_column($partenaires, 'id'));
     
         // Vérification si l'index a été trouvé
         if ($index !== false) {
+            
             $partenaires[$index]['nom'] = $_POST['nom'];
             $partenaires[$index]['description'] = $_POST['description'];
             $partenaires[$index]['logo'] = $_POST['logo'];
-            echo "<p class='text-success'>Mis à jour avec succès</p>";
+            
     
             // mise à jour du fichier JSON
             $partenaires_json = json_encode($partenaires);
             
-            file_put_contents($file_path, $partenaires_json);
+            if (file_put_contents($file_path, $partenaires_json) !== false) {
+                echo "<p class='text-success'>Mis à jour avec succès</p>";
+            } else {
+                echo "<p>Erreur lors de la mise à jour du fichier partenaires.json.</p>";
+            }
             
         } else {
             echo "Erreur : partenaire introuvable";
@@ -102,7 +121,7 @@ function partenaires($partenaire1) {
     }
     //affichage du tableau des partenaires
     echo '<div>'.table_info_part($partenaires).'</div>';
-
+    var_dump($modif);
     ?>
 </div>
 
