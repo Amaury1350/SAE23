@@ -59,18 +59,15 @@
             // Affichage du tableau
             echo "<table class='table table-striped table-hover table-bordered'>";
             echo "<thead><tr><th>Photo de profil</th><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th></tr></thead>";
-            $json=json_encode($annuaire);
-            $file_path='annuaire.json';
-            $_SESSION['Identifiant']=$annuaire;
-            file_put_contents($file_path, $annuaire_json);
 
             foreach ($annuaire as $colonne) {
                 echo "<tr>";
-                echo "<td>".$colonne[0]."</td>";
+                echo "<td class='px-2-0 py-0'><img src='".$colonne[0]."' width='50' alt='erreur'></td>";
                 echo "<td>".$colonne[1]."</td>";
                 echo "<td>".$colonne[2]."</td>";
                 echo "<td>".$colonne[3]."</td>";
                 echo "<td>".$colonne[4]."</td>";
+                echo "<td>".$colonne[5]."</td>";
                 
 
                 echo "</tr>";
@@ -80,5 +77,6 @@
 
         ?>
     </div>
+        </main>
 </body>
 </html>
