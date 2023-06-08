@@ -27,7 +27,6 @@
           $partenaires_json = file_get_contents($file_path);
           // Décodage du JSON
           $partenaires = json_decode($partenaires_json, true);
-          //return var_dump($partenaires);
           afficherPartenaires($partenaires);
         ?>
       </div>

@@ -55,7 +55,10 @@
                 array("image/profil30.jpg", "GAUDREAU", "Claire", "Comptable", createID("Claire","GAUDREAU"), "Salarié"),
                 array("image/profil15.jpg", "ARTOIS", "Claude", "Comptable",createID("Claude","ARTOIS"), "Salarié"),
             );
-
+            $json = json_encode($annuaire);
+            $file_path = 'annuaire.json';
+            $_SESSION['Identifiant'] = $json;
+            file_put_contents($file_path, $json);
             // Affichage du tableau
             echo "<table class='table table-striped table-hover table-bordered'>";
             echo "<thead><tr><th>Photo de profil</th><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th></tr></thead>";
