@@ -121,7 +121,6 @@ function partenaires($partenaire1) {
     }
     //affichage du tableau des partenaires
     echo '<div>'.table_info_part($partenaires).'</div>';
-    var_dump($modif);
     ?>
 </div>
 
