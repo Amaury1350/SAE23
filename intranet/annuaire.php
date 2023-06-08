@@ -61,13 +61,13 @@
             echo "<table class='table table-striped table-hover table-bordered'>";
             echo "<thead><tr><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th></tr></thead>";
 
-            foreach ($annuaire as $employe) {
+            foreach ($annuaire as $colonne) {
                 echo "<tr>";
-                echo "<td>".$employe[0]."</td>";
-                echo "<td>".$employe[1]."</td>";
-                echo "<td>".$employe[2]."</td>";
-                echo "<td>".$employe[3]."</td>";
-                echo "<td>".$employe[4]."</td>";
+                echo "<td>".$colonne[0]."</td>";
+                echo "<td>".$colonne[1]."</td>";
+                echo "<td>".$colonne[2]."</td>";
+                echo "<td>".$colonne[3]."</td>";
+                echo "<td>".$colonne[4]."</td>";
                 
 
                 echo "</tr>";
