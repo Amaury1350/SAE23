@@ -250,22 +250,26 @@ echo '<nav class="navbar navbar-expand-lg shadow-lg" style="background-color:#22
 
 // fonction cards partenaires
 function afficherPartenaires($partenaire3)
-{ echo '<div class="album py-5 bg-body-tertiary">
+{
+    echo '<div class="album py-5 bg-body-tertiary">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">';
 
     foreach ($partenaire3 as $partenaire) {
         echo '<div class="col">
                   <div class="card shadow-sm">';
-        echo '<img src="' . $partenaire['logo'] . '" class="card-img-top" width="20%" alt="' . $partenaire['nom'] . '">';
+        echo '<div class="card-img-container d-flex justify-content-center align-items-center py-4">';
+        echo '<img src="' . $partenaire['logo'] . '" class="card-img-top" style="width:50%;" alt="' . $partenaire['nom'] . '">';
+        echo '</div>';
         echo '<div class="card-body">';
-        echo '<h5 class="card-title">' . $partenaire['nom'] . '</h5>';
+        echo '<h5 class="card-title"><b>' . $partenaire['nom'] . '</b></h5>';
         echo '<p class="card-text">' . $partenaire['description'] . '</p>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
-        
     }
-  echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
 }
 
 // Fonction pour les identifiants
