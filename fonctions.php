@@ -290,6 +290,7 @@ function table_info_part($partenaire2) {
   echo '<th>Nom</th>';
   echo '<th>Description</th>';
   echo '<th>Informations privées</th>';
+  echo '<th>Modification</th>';
   echo '</tr>';
   echo '</thead>';
   echo '<tbody>';
@@ -299,16 +300,17 @@ function table_info_part($partenaire2) {
       echo '<td><img src="' . $partenaire['logo'] . '" alt="' . $partenaire['nom'] . '" width="50"></td>';
       echo '<td>' . $partenaire['nom'] . '</td>';
       echo '<td>' . $partenaire['description'] . '</td>';
-/*
+
       // Vérification de l'autorisation d'accès aux informations privées
-      $userGroup = 'groupe1'; // Remplacez par le groupe d'utilisateurs approprié
-      if ($userGroup == 'groupe1') {
+      $userGroup = 'Administrateur'; // Remplacez par le groupe d'utilisateurs approprié
+      if ($userGroup == 'Administrateur') {
           echo '<td>' . $partenaire['infos_privees'] . '</td>';
       } else {
           echo '<td>Non autorisé</td>';
       }
 
-      echo '</tr>';*/
+      echo '<td><form method="POST" action="modif_part.php"><input type="hidden" name="id" value="' . $partenaire['id'] . '"><button type="submit" class="btn btn-warning">Modifier</button></form></td>';
+      echo '</tr>';
   }
   echo '</tbody>';
   echo '</table>';
