@@ -11,16 +11,17 @@
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
+<body>
 <div class="sidenav">
   <div class="login-main-text">
     <h3 class="display-3">Connexion au site</h3>
     <h4>Entrez votre nom d'utilisateur et votre mot de passe</h4>
   </div>
 </div>
-<div class="main">
+<div class="main text-center">
   <div class="col-md-6 col-sm-12">
     <div class="login-form">
-      <form action="connexion/connexion.php" method="post">
+      <form action="intranet/accueil.php" method="post">
         <div class="form-group">
           <label>Utilisateur</label>
           <input type="text" class="form-control" name="utilisateur" placeholder="Utilisateur">
@@ -35,3 +36,6 @@
     </div>
   </div>
 </div>
+
+</body>
+</html>
