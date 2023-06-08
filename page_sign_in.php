@@ -21,7 +21,7 @@
 <div class="main text-center">
   <div class="col-md-6 col-sm-12">
     <div class="login-form">
-      <form action="intranet/accueil.php" method="post">
+      <form action="intranet/connexion.php" method="post">
         <div class="form-group">
           <label>Utilisateur</label>
           <input type="text" class="form-control" name="utilisateur" placeholder="Utilisateur">
