@@ -13,26 +13,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $motdepasse_saisi = $_POST['motdepasse'];
 
     // Vérifier l'authentification de l'utilisateur
-    if (array_key_exists($utilisateur_saisi, $data)){
-        $identifiant = $data[$utilisateur_saisi]['identifiant'];
-        echo $utilisateur_saisi;
-        echo 'Utilisateur trouvé';
-    } else {
-        echo 'Utilisateur introuvable';
-    }
+           
+           
+            foreach ($data as $colonne) {
+            if($utilisateur_saisi == $colonne[4]){
+                if ($motdepasse_saisi == 'bonjour'){
+                    $_SESSION['prenom'] = $_POST['utilisateur'];
+                    header("Location: Accueil.php");
+                    exit();
+                    echo 'Authentification réussie';
+                    echo ('Utilisateur: '.$_SESSION['prenom'].'<hr>');
+                } else {
+                    // Authentification échouée
+                    echo 'Mot de passe incorrect';
+                }
+            } else {
+                echo 'Utilisateur inconnue';  
+            }
+
+            } 
+
     // Vérifier le mot de passe
-    if ($motdepasse_saisi == 'bonjour'){
-        $_SESSION['prenom'] = $_POST['utilisateur'];
-        echo 'Authentification réussie';
-        header("Location: Accueil.php");
-        exit();
-        echo ('Utilisateur: '.$_SESSION['prenom'].'<hr>');
-    } else {
-        // Authentification échouée
-        echo 'Mot de passe incorrect';
-    }
-
-
 }
 
 // Vérifier si un utilisateur est connecté
@@ -44,5 +45,3 @@ if (isset($_SESSION['prenom'])){
 ?>
 </body>
 </html>
-
-
