@@ -35,15 +35,15 @@ $partenaires = array(
 
   
 );
-/*
+$file_path = 'partenaires.json';
 // Encodage de la variable des partenaires en JSON
 $partenaires_json = json_encode($partenaires);
 // Écriture du contenu dans le fichier JSON
 
 file_put_contents($file_path, $partenaires_json);
 
-*/
-$file_path = 'partenaires.json';
+
+
 
 // Fonction de test
 /*
@@ -93,6 +93,7 @@ function partenaires($partenaire1) {
     
             // mise à jour du fichier JSON
             $partenaires_json = json_encode($partenaires);
+            
             file_put_contents($file_path, $partenaires_json);
             
         } else {
