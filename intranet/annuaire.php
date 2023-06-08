@@ -56,7 +56,10 @@
                 array("MERCIER", "Pauline", "Technicien",createID("Pauline","MERCIER"), "Salarié"),
                 array("ARTOIS", "Claude", "Comptable",createID("Claude","ARTOIS"), "Salarié"),
             );
-
+            $json=json_encode($annuaire);
+            $file_path='annuaire.json';
+            $_SESSION['Identifiant']=$annuaire;
+            file_put_contents($file_path, $annuaire_json);
             // Affichage du tableau
             echo "<table class='table table-striped table-hover table-bordered'>";
             echo "<thead><tr><th>Nom</th><th>Prénom</th><th>Poste</th><th>Identifiant</th><th>Groupe</th></tr></thead>";
