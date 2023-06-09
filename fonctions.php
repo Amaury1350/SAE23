@@ -168,6 +168,7 @@
 ///Nav bar pour l'intranet
 
 function navbar($np1){
+  session_start();
   $na="";$nb="";$nc="";$nd="";$ne="";$nf="";
   $naa=" style='color:#eeeeee'";$nbb=" style='color:#eeeeee'";$ncc=" style='color:#eeeeee'";$ndd=" style='color:#eeeeee'";$nee=" style='color:#eeeeee'";$nff=" style='color:#eeeeee'";
 
@@ -232,7 +233,13 @@ echo '<nav class="navbar navbar-expand-lg shadow-lg" style="background-color:#22
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../image/homme.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
+            <strong>';
+          if (isset($_SESSION['prenom'])){
+              echo 'Bonjour: ' . $_SESSION['prenom'];
+          } else {
+              echo 'Utilisateur non connecté';
+          }
+          echo '</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">Nouveau projet...</a></li>
